@@ -113,7 +113,8 @@ class TicketResource extends Resource
             ])
             ->filters([
                 SelectFilter::make('category_id')
-                    ->relationship('category', 'name'),
+                    ->relationship('category', 'name')
+                    ->label('Category'),
             ])
             ->actions([
                 Tables\Actions\ViewAction::make(),
